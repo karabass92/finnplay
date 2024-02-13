@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  server:
+    container_name: server
+    build:
+      context: ./server
+    restart: unless-stopped
+    ports:
+      - '${API_PORT}:${API_PORT}'
+    environment:
+      - API_PORT=${API_PORT}
+      - API_HOST=${API_HOST}
+      - JWT_SECRET=${JWT_SECRET}
+  client:
+    container_name: client
+    build: ./client
+    restart: unless-stopped
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    stdin_open: true
+    tty: true

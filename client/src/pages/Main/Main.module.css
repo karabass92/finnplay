@@ -1,0 +1,21 @@
+.container {
+    max-width: 1440px;
+    padding: min(75px, 5.2%) min(82px, 5.7%);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width:1024px){
+    .container {
+        flex-direction: column-reverse;
+        gap: 32px;
+        position: relative;
+    }
+}
+
+@media(max-width:428px){
+    .container {
+        padding: 24px;
+    }
+}

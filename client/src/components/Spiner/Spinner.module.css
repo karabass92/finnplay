@@ -1,0 +1,13 @@
+.spinner {
+    vertical-align: middle;
+    animation: rotation 1.5s infinite normal;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

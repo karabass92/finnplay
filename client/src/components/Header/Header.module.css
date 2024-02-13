@@ -1,0 +1,27 @@
+.container {
+    box-shadow: 0 2px 18px 0 rgba(128, 128, 128, 0.1);
+}
+
+.content {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 0 min(82px, 5.7%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userInfo {
+    display: flex;
+    gap: 41px;
+}
+
+.userInfo > img {
+    cursor: pointer;
+}
+
+@media(max-width:428px){
+    .content {
+        padding: 12px 24px 0 24px;
+    }
+}
