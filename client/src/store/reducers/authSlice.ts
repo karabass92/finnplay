@@ -40,9 +40,9 @@ export const authSlice = createSlice({
     reducers: {
         login: (state, action: PayloadAction<IUser>) => {
             if (action.payload?.token) {
-                state.isAuth = true
-                state.user = action.payload
                 localStorage.setItem('jwt_token', action.payload.token)
+                state.user = action.payload
+                state.isAuth = true 
             }  
         },
         setError: (state, action: PayloadAction<string>) => {
@@ -53,7 +53,6 @@ export const authSlice = createSlice({
         },
         logout: (state) => {
             localStorage.removeItem('jwt_token')
-            localStorage.removeItem('user_id')
             state.isAuth = false
             state.user = null
         },

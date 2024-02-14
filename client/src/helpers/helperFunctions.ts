@@ -1,22 +1,28 @@
 import { IGame, IGroup } from '../interfaces/interfaces'
 
 
-// const sortByName = (a: IGame, b: IGame) => {
-//     return a.name.localeCompare(b.name)
-// }
-
-const sortByName = (a: IGame, b: IGame) => {
+export const sortByName = (a: IGame, b: IGame): number => {
     if (a.name < b.name) return -1
     if (a.name > b.name) return 1
     return 0;
 }
 
-const sortByNameReverse = (a: IGame, b: IGame) => {
+export const sortByNameReverse = (a: IGame, b: IGame): number => {
     return b.name.localeCompare(a.name)
 }
 
-const sortByDate = (a: IGame, b: IGame) => {
+export const sortByDate = (a: IGame, b: IGame): number => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
+}
+
+export const getInitialGameList = (
+    allGames: IGame[],
+    groups: IGroup[]
+): IGame[] => {
+    let allowedGamesIds: number[] = []
+    groups.forEach(el => allowedGamesIds = allowedGamesIds.concat(el.games))
+    const allowedGames = allGames.filter(game => allowedGamesIds.includes(game.id))
+    return allowedGames
 }
 
 export const filterGamesList = (

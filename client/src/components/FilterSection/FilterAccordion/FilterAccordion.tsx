@@ -67,6 +67,8 @@ const FilterAccordion: FC<Props> = ({ isVisible }) => {
                 setSortType={onSortTypeChange}
             />
             <SliderFilterInput
+                minValue={2}
+                maxValue={4}
                 value={columnsAmount}
                 setValue={onColumnsAmountChange}
             />
