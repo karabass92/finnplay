@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
-import styles from './PasswordInput.module.css'
 import eye from '../../../assets/img/eye.svg'
+import styles from './PasswordInput.module.scss'
 
 
 type Props = {
@@ -36,7 +36,7 @@ const PasswordInput: FC<Props> = ({
                 onChange={(e) => setPassword(e.target.value)}
                 onFocus={onFocusHandler}
                 onBlur={onBlurHandler}
-                className={isError ? `${styles.passwordInput} ${styles.isErrorField}` : styles.passwordInput}
+                className={isError ? styles.isErrorField : ''}
             />
             <img src={eye} alt="visible" className={styles.visible} onClick={() => setIsVisible(!isVisible)}  />
             <span className={(isFocused || password) ? styles.active : styles.placeholder}>

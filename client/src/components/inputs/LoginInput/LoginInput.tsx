@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import styles from './LoginInput.module.css'
+import styles from './LoginInput.module.scss'
 
 
 type Props = {
@@ -33,7 +33,7 @@ const LoginInput: FC<Props> = ({
                 onChange={(e) => setLogin(e.target.value)}
                 onFocus={onFocusHandler}
                 onBlur={onBlurHandler}
-                className={isError ? `${styles.loginInput} ${styles.isErrorField}` : styles.loginInput}
+                className={isError ? styles.isErrorField : ''}
             />
             <span className={(isFocused || login) ? styles.active : styles.placeholder}>
                 Login

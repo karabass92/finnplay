@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import search from '../../../assets/img/search.svg'
-import styles from './SearchInput.module.css'
+import styles from './SearchInput.module.scss'
 
 
 type Props = {
@@ -22,11 +22,10 @@ const SearchInput: FC<Props> = ({
                 type="text" 
                 value={searchValue} 
                 onChange={(e) => setSearchValue(e.target.value)}
-                className={styles.searchInput}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
             />
-            <span className={(isFocused || searchValue ) ? styles.active : styles.placeholder}>
+            <span className={(isFocused || searchValue ) ? styles.active : ''}>
                 Search
             </span>
             <img src={search} alt="" />

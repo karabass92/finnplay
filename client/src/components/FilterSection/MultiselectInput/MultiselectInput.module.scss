@@ -1,0 +1,16 @@
+$color-header: rgba(128, 128, 128, 1);
+
+.container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & > h2 {
+        color: $color-header;
+    }
+    & > div {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

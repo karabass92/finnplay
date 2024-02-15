@@ -4,7 +4,7 @@ import { logout } from '../../store/reducers/authSlice'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/img/logo.svg'
 import logoutImg from '../../assets/img/logout.svg'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 
 
 const Header: FC = () => {

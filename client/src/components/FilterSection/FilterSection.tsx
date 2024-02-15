@@ -4,7 +4,7 @@ import { setSearchValue } from '../../store/reducers/filterSlice'
 import SearchInput from '../inputs/SearchInput/SearchInput'
 import FilterAccordion from './FilterAccordion/FilterAccordion'
 import burger from '../../assets/img/burger.svg'
-import styles from './FilterSection.module.css'
+import styles from './FilterSection.module.scss'
 
 
 const FilterSection: FC = () => {

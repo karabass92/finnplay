@@ -5,7 +5,7 @@ import { setGames, setGroups, setProviders } from '../../store/reducers/dataSlic
 import { getInitialGameList } from '../../helpers/helperFunctions'
 import GameList from '../../components/GameList/GameList'
 import FilterSection from '../../components/FilterSection/FilterSection'
-import styles from './Main.module.css'
+import styles from './Main.module.scss'
 
 
 const Main: FC = () => {

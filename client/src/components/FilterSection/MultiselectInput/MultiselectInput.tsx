@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { IMultiselectInputOptions } from '../../../interfaces/interfaces'
 import FilterItem from '../FilterItem/FilterItem'
-import styles from './MultiselectInput.module.css'
+import styles from './MultiselectInput.module.scss'
 
 
 type Props = {

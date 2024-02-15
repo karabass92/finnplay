@@ -12,7 +12,7 @@ import { RootState } from '../../../store/store'
 import MultiselectInput from '../MultiselectInput/MultiselectInput'
 import Sorter from '../Sorter/Sorter'
 import SliderFilterInput from '../SliderFilterInput/SliderFilterInput'
-import styles from './FilterAccordion.module.css'
+import styles from './FilterAccordion.module.scss'
 
 
 type Props = {

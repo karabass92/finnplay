@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import styles from './Sorter.module.css'
+import styles from './Sorter.module.scss'
 
 
 type Props = {

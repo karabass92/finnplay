@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import styles from './SliderFilterInput.module.css'
+import styles from './SliderFilterInput.module.scss'
 
 
 type Props = {
@@ -24,7 +24,7 @@ const SliderFilterInput: FC<Props> = ({
             <h2>Columns</h2>
             <div className={styles.range}>
                 <div 
-                    className={`${styles.value} ${styles.left} ${value >= minValue ? `${styles.active}` : null}`}
+                    className={`${styles.left} ${value >= minValue ? `${styles.active}` : null}`}
                     onClick={() => setValue(minValue)}
                 >
                     {minValue}
@@ -38,7 +38,7 @@ const SliderFilterInput: FC<Props> = ({
                                     style={{
                                         left: `calc((100% - 24px)*${index + 1}/${maxValue - minValue})`
                                     }}
-                                    className={`${styles.value} ${value >= el ? `${styles.active}` : null}`}
+                                    className={`${value >= el ? `${styles.active}` : null}`}
                                     onClick={() => setValue(el)}
                                 >
                                     {el}
@@ -48,7 +48,7 @@ const SliderFilterInput: FC<Props> = ({
                     : null
                 }
                 <div 
-                    className={`${styles.value} ${styles.right} ${value >= maxValue ? `${styles.active}` : null}`}
+                    className={`${styles.right} ${value >= maxValue ? `${styles.active}` : null}`}
                     onClick={() => setValue(maxValue)}
                 >
                     {maxValue}

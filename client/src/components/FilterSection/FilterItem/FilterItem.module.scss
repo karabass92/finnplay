@@ -1,0 +1,18 @@
+$color-checked-background: #FDBC11;
+
+.default {
+    padding: 5px 10px;
+    cursor: pointer;
+    & span {
+        position: relative;
+        left: 0;
+        top: -5px;
+    }
+}
+
+.checked {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: $color-checked-background;
+    cursor: pointer;
+}

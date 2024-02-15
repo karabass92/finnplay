@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from '../../store/hooks'
 import { setGamesAmount } from '../../store/reducers/dataSlice'
 import GameItem from '../GameItem/GameItem'
 import { filterGamesList } from '../../helpers/helperFunctions'
-import styles from './GameList.module.css'
+import styles from './GameList.module.scss'
 
 
 const GameList: FC = () => {

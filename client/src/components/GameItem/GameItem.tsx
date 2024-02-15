@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { IGame } from '../../interfaces/interfaces'
-import styles from './GameItem.module.css'
+import styles from './GameItem.module.scss'
 
 
 const GameItem: FC<IGame> = ({

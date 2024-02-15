@@ -9,15 +9,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.userInfo {
-    display: flex;
-    gap: 41px;
-}
-
-.userInfo > img {
-    cursor: pointer;
+    & .userInfo {
+        display: flex;
+        gap: 41px;
+        & > img {
+            cursor: pointer;
+        }
+    }
 }
 
 @media(max-width:428px){

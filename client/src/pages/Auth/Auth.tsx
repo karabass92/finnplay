@@ -6,7 +6,7 @@ import LoginInput from '../../components/inputs/LoginInput/LoginInput'
 import PasswordInput from '../../components/inputs/PasswordInput/PasswordInput'
 import Spinner from '../../components/Spiner/Spinner'
 import logo from '../../assets/img/logo.svg'
-import styles from './Auth.module.css'
+import styles from './Auth.module.scss'
 
 
 const Auth: FC = () => {
@@ -37,7 +37,7 @@ const Auth: FC = () => {
     return (
         <div className={styles.container}>
             <main className={styles.formContainer}>
-                <img src={logo} alt='logo' className={styles.logo} />
+                <img src={logo} alt='logo' />
                 <section className={styles.inputSection}>
                     <LoginInput login={login} setLogin={setLogin} />
                     <PasswordInput password={password} setPassword={setPassword} />
@@ -46,7 +46,7 @@ const Auth: FC = () => {
                     {isLoading ? <Spinner /> : 'Login'}
                 </button>
                 { error ?
-                    <span className={styles.errorMessage}>
+                    <span>
                         Login or password is incorrect!
                     </span>
                     : null

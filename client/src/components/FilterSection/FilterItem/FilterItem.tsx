@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import styles from './FilterItem.module.css'
+import styles from './FilterItem.module.scss'
 
 
 type Props = {
