@@ -1,4 +1,5 @@
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
+import { useDebounce } from '../../../helpers/hooks'
 import search from '../../../assets/img/search.svg'
 import styles from './SearchInput.module.scss'
 
@@ -15,17 +16,24 @@ const SearchInput: FC<Props> = ({
 }) => {
 
     const [isFocused, setIsFocused] = useState<boolean>(false)
+    const [value, setValue] = useState<string>(searchValue)
+
+    const debouncedSearchValue = useDebounce(value, 1000)
+
+    useEffect(() => {
+        setSearchValue(debouncedSearchValue)
+    }, [debouncedSearchValue, setSearchValue])
 
     return (
         <div className={styles.container}>
             <input 
                 type="text" 
-                value={searchValue} 
-                onChange={(e) => setSearchValue(e.target.value)}
+                value={value} 
+                onChange={(e) => setValue(e.target.value)}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
             />
-            <span className={(isFocused || searchValue ) ? styles.active : ''}>
+            <span className={(isFocused || value ) ? styles.active : ''}>
                 Search
             </span>
             <img src={search} alt="" />
