@@ -1,19 +1,20 @@
 import { FC, useState, useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../../store/hooks'
+import { RootState } from '@/app/appStore'
+import { useAppDispatch, useAppSelector } from '../../app/appStore'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { loginAsync } from '../../store/reducers/authSlice'
-import LoginInput from '../../components/inputs/LoginInput/LoginInput'
-import PasswordInput from '../../components/inputs/PasswordInput/PasswordInput'
-import Spinner from '../../components/Spiner/Spinner'
-import logo from '../../assets/img/logo.svg'
+import { loginAsync } from '../../entities/auth/api/authSlice'
+import LoginInput from '../../features/LoginInput/LoginInput'
+import PasswordInput from '../../features/PasswordInput/PasswordInput'
+import Spinner from '../../features/Spiner/Spinner'
+import logo from '../../shared/images/logo.svg'
 import styles from './Auth.module.scss'
 
 
 const Auth: FC = () => {
 
-    const isAuth = useAppSelector((state) => state.session.isAuth)
-    const isLoading = useAppSelector((state) => state.session.isLoading)
-    const error = useAppSelector((state) => state.session.error)
+    const isAuth = useAppSelector((state: RootState) => state.session.isAuth)
+    const isLoading = useAppSelector((state: RootState) => state.session.isLoading)
+    const error = useAppSelector((state: RootState) => state.session.error)
     
     const dispatch = useAppDispatch()
     const navigate = useNavigate()

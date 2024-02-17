@@ -1,10 +1,10 @@
 import { FC, useEffect } from 'react'
-import { useAppDispatch } from '../../store/hooks'
-import { dataApi } from '../../store/api/dataApi'
-import { setGames, setGroups, setProviders } from '../../store/reducers/dataSlice'
-import { getInitialGameList } from '../../helpers/helperFunctions'
-import GameList from '../../components/GameList/GameList'
-import FilterSection from '../../components/FilterSection/FilterSection'
+import { useAppDispatch } from '../../app/appStore'
+import { dataApi } from '../../entities/data/api/dataApi'
+import { setGames, setGroups, setProviders } from '../../entities/data/api/dataSlice'
+import { getInitialGameList } from '../../shared/helpers/helperFunctions'
+import GameList from '../../widgets/GameList/GameList'
+import FilterSection from '../../widgets/FilterSection/FilterSection'
 import styles from './Main.module.scss'
 
 
